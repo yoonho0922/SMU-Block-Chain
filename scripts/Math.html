@@ -1,0 +1,29 @@
+
+<!doctype>
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/web3@1.2.5/dist/web3.min.js"></script> 
+        
+        <script type="text/javascript">
+
+            var web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8345"));
+            
+            var abi =[{"inputs":[{"internalType":"uint256","name":"input","type":"uint256"}],"name":"powerOf2","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"pure","type":"function"}];
+            var addr = "0xF29Ce19a5Fc83Dd17f4238B833256bF8fE17FdA7";
+            
+            var power = new web3.eth.Contract(abi,addr);
+            
+            function displayPowerOf2() {
+                
+                power.methods.powerOf2(32).call().then(function(value){
+                    document.getElementById('result').innerText = 'input:32, output: ' + value;
+                });
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Math.html</h1>
+        <button type="button" onClick="displayPowerOf2();">Display powerOf2</button>
+        <div id="result"></div>
+    </body>
+</html>
