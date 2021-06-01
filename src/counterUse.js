@@ -6,6 +6,6 @@ var addr = "0x36d072eCea5AF6274EfFb6dBCf94a2ff79558EA3";
 var counter = new web3.eth.Contract(abi,addr);
 
 counter.methods.getCounter().call().then(function(str) {console.log(str);});
-//counter.methods.subtract().send({from:"0x03D8F3F2a4Ca98C225168DF094B96347B6Eb8A70",gas:100000});
-//counter.methods.add().send({from:"0x03D8F3F2a4Ca98C225168DF094B96347B6Eb8A70",gas:100000});
+//counter.methods.subtract().send({from:"0x988c7734a7D3f5e57d45870a83aE6CdC4d0Ad9b5",gas:100000});
+//counter.methods.add().send({from:"0xF9e3D4bCDAA6E04a8a599Bf87EAb7f7d972D3142",gas:100000});
 counter.methods.getCounter().call().then(function(str) {console.log(str);});

@@ -1,13 +1,21 @@
 var Web3=require('web3');
-var my = require('./Timer');  //cotaining abi,bin
-var web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8345"));
+var _abiJson = require('./GethTimerABI.json');
+var _binJson = require('./GethTimerBIN.json');
 
-// abi from Timer.js
-var _abiArray=JSON.parse(my._compiled.contracts['src/Timer.sol:Timer'].abi);   //JSON parsing needed!!
-// contract address
-var timer = new web3.eth.Contract(_abiArray,"0x0583A82C585a4aAF32dE71863aA9e15Ad8C01Ad0");
+var web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8447"));
 
-//timer.methods.start().send({from:"0x96c60339b39C8Faf126540B6a9BEa830fE5B43ff",gas:100000});
-timer.methods.getStart().call().then(function(value) {console.log("startTime: " + value);});
-timer.methods.getNow().call().then(function(value) {console.log("now: " + value);});
-timer.methods.timePassed().call().then(function(value) {console.log("passed: " + value);});
+//var my = require('./Timer');  //cotaining abi,bin
+//abi from Timer.js
+//var _abiArray=JSON.parse(my._compiled.contracts['src/Timer.sol:Timer'].abi);   //JSON parsing needed!!
+//console.log("- ABI: "+my._compiled.contracts['src/Timer.sol:Timer'].abi);
+
+contractName=Object.keys(_abiJson.contracts); // reading ['src//Timer.sol:Timer'];
+console.log("- contract name: ", contractName[0]); //or console.log(contractName);
+_abiArray=JSON.parse(_abiJson.contracts[contractName].abi);    //JSON parsing needed!!
+_bin=_binJson.contracts[contractName].bin;
+var timer = new web3.eth.Contract(_abiArray,"0xF341440f0dC9119ea6556bbdCCC6b0edF499eC34");
+
+
+timer.methods.getNow().call().then(function(value) {console.log(value);});
+timer.methods.start().send({from:"0x5c46b33dc12cf6ebbb834310ef235730f6c8449e",gas:100000});
+timer.methods.timePassed().call().then(function(value) {console.log(value);});

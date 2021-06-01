@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "ganache-cli": "^6.12.2",
+    "solc": "^0.5.3",
     "web3": "^1.2.6"
   }
 }

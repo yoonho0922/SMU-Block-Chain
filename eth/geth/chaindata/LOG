@@ -499,3 +499,47 @@
 09:57:56.348409 db@open done T·21.9439ms
 10:11:20.492172 db@close closing
 10:11:20.493257 db@close done T·1.0852ms
+=============== May 16, 2021 (KST) ===============
+12:08:51.441125 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+12:08:51.453533 version@stat F·[1 1] S·90KiB[6KiB 84KiB] Sc·[0.25 0.00]
+12:08:51.453533 db@open opening
+12:08:51.453533 journal@recovery F·1
+12:08:51.456523 journal@recovery recovering @114
+12:08:51.461580 memdb@flush created L0@116 N·4 S·6KiB "Sna..tor,v2102":"unc..own,v2101"
+12:08:51.464503 version@stat F·[2 1] S·97KiB[13KiB 84KiB] Sc·[0.50 0.00]
+12:08:51.474475 db@janitor F·5 G·0
+12:08:51.474475 db@open done T·20.9425ms
+12:28:56.148985 db@close closing
+12:28:56.150125 db@close done T·1.1395ms
+=============== May 16, 2021 (KST) ===============
+12:29:12.174108 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+12:29:12.175312 version@stat F·[2 1] S·97KiB[13KiB 84KiB] Sc·[0.50 0.00]
+12:29:12.175312 db@open opening
+12:29:12.175312 journal@recovery F·1
+12:29:12.178500 journal@recovery recovering @117
+12:29:12.184979 memdb@flush created L0@119 N·4 S·6KiB "Sna..tor,v2107":"unc..own,v2106"
+12:29:12.188518 version@stat F·[3 1] S·103KiB[19KiB 84KiB] Sc·[0.75 0.00]
+12:29:12.200898 db@janitor F·6 G·0
+12:29:12.200898 db@open done T·25.5854ms
+=============== Jun 1, 2021 (KST) ===============
+19:21:47.817794 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+19:21:47.833517 version@stat F·[3 1] S·103KiB[19KiB 84KiB] Sc·[0.75 0.00]
+19:21:47.833517 db@open opening
+19:21:47.833517 journal@recovery F·1
+19:21:47.836401 journal@recovery recovering @120
+19:21:47.846369 memdb@flush created L0@122 N·1531 S·78KiB "H\x00q..\x17\xdb~,v3482":"unc..own,v2111"
+19:21:47.849363 version@stat F·[4 1] S·181KiB[97KiB 84KiB] Sc·[1.00 0.00]
+19:21:47.861098 db@janitor F·7 G·0
+19:21:47.861098 db@open done T·27.5807ms
+19:21:47.862194 table@compaction L0·4 -> L1·1 S·181KiB Q·3642
+19:21:47.883111 table@build created L1@125 N·2342 S·142KiB "\x16N\xbc..u\x1cT,v1888":"\xfa\xc5'..\x14\xa3\xa9,v1985"
+19:21:47.883111 version@stat F·[0 1] S·142KiB[0B 142KiB] Sc·[0.00 0.00]
+19:21:47.885305 table@compaction committed F-4 S-39KiB Ke·0 D·523 T·23.1109ms
+19:21:47.885809 table@remove removed @119
+19:21:47.886216 table@remove removed @116
+19:21:47.886771 table@remove removed @113
+19:21:47.887327 table@remove removed @112
+19:21:48.149028 table@compaction range L-1 "a":"b"
+19:21:48.168240 table@compaction range L-1 "o":"p"
+20:25:38.943430 db@close closing
+20:25:38.944056 db@close done T·626.3µs

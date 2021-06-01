@@ -1,0 +1,1 @@
+{"contracts":{"../src/EventTest.sol:EventTest":{"abi":"[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"string\",\"name\":\"my\",\"type\":\"string\"}],\"name\":\"MyLog\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"myFunction\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}]"}},"version":"0.6.4+commit.1dca32f3.Windows.msvc"}
